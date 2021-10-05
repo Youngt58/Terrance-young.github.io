@@ -35,7 +35,13 @@
 
         ////////////////////////////////////////////////////////////////////////
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
-        
+        createCollectable(type.steve, 100, 270, 6, 0.7)
+        createCollectable(type.steve, 100, 370, 6, 0.7)
+        createCollectable(type.steve, 200, 500, 5, 0.7)
+        createCollectable(type.steve, 400, 270, 6, 0.7)
+        createCollectable(type.steve, 500, 50, 6, 0.7)
+        createCollectable(type.steve, 400, 50, 6, 0.7)
+        createCollectable(type.steve, 300, 50, 6, 0.7)
         // example: 
         createCollectable(type.steve, 200, 170, 6, 0.7);
         
