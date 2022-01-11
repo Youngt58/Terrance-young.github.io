@@ -81,11 +81,14 @@
 			turn it around! 
 			*/
 			function update() {
-				moveBoxTo(boardWidth);
-					positionX = positionX + 10;
-					 moveBoxTo(positionX);
-				
+				positionX = positionX + 10;
+				moveBoxTo(positionX);	
+				speed(positionX);
 			};
+			if (positionX < boardWidth) {
+				positionX = -speed
+				speed = speed + 1;
+			}
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
 			it should increase the points total, increase the speed, and move the box to
@@ -93,8 +96,8 @@
 			*/
 			function handleBoxClick() {
                 positionX = 0;
-				points += 1;
-				speed += 3;
+				points = points + 1;
+				speed = speed + 3;
 				changeBoxText(points);
 			};
 		})();
