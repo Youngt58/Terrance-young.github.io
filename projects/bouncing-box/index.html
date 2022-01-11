@@ -81,8 +81,9 @@
 			turn it around! 
 			*/
 			function update() {
-				positionX = 0;
-				moveBoxTo(positionX);
+				moveBoxTo(boardWidth);
+					positionX = positionX + 10;
+					 moveBoxTo(positionX);
 				
 			};
 			/* 
