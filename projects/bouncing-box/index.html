@@ -20,7 +20,8 @@
 			position: absolute;
 			top: 100px;
 			left: 100px;  /* <--- Change me! */
-			background-image: url("https://acegif.com/wp-content/gif/outerspace-41.gif");
+			background-image: url("https://www.baldwinpl.org/wp-content/uploads/2020/12/Snoopy-Reading-in-the-Snow-GIF.gif");
+			border-radius: 50%;
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -66,11 +67,8 @@
 			
 			// TODO 2 - Variable declarations 
 			var positionX = 0;
-            var speedX = 10;
+            var speed = 10;
             var points = 0;
-            var positionY;
-            var speedY;
-            var boardHeight = jQuery(window).height(); 
           
 
 
@@ -84,30 +82,20 @@
 			turn it around! 
 			*/
 			function update() {
-				positionX += speedX;
-               	var positionX = moveBoxTo("left", positionX);
-               
-                if (positionX > boardWidth) {
-                    speedX = -speedX;
-                }
-                if (positionX < 0) {
-                    speedX = -speedX;
-                }
-
-
+				positionX = 0;
+				moveBoxTo(positionX);
+				
 			};
-
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
 			it should increase the points total, increase the speed, and move the box to
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				debugger;
-                points += 1;
-                box.text(points);
-                speedX += 3;
                 positionX = 0;
+				points += 1;
+				speed += 3;
+				changeBoxText(points);
 			};
 		})();
 	</script>
